@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Calculando áreas</h1>
+    Tamanho da base:  <input id="base" type="number" placeholder="cm">(Quadrado use somente a base)<br>
+
+    Tamanho da altura:<input id="altura" type="number" placeholder="cm"><br>
+
+    Tamanho do Raio:  <input id="raio" type="number" placeholder="cm"> (Só usado em circunferências) <br>
+
+
+    <Button onclick="quadrado()">Calcular quadrado</Button>
+    
+    <Button onclick="retangulo()">Calcular retangulo</Button>
+    
+    <Button onclick="triangulo()">Calcular triangulo</Button>
+    
+    <Button onclick="circulo()">Calcular circulo</Button><br>
+
+    <div id="resposta"></div>
+
+</body>
+</html>
+
+<script>
+    
+    var resultado
+
+function quadrado(){
+    var resultado = (base.value * base.value)
+    resposta.innerHTML = `Seu <b style="color: blue;">quadrado</b> tem uma <b style="background-Color: orange;">área</b> de ${resultado} cm²`
+    
+}
+
+function retangulo(){
+  
+    var resultado = (base.value * altura.value)
+resposta.innerHTML = `Seu <b style="color: green;">retangulo</b> tem uma área de <b style="background-Color: red;">${resultado} cm²</b>`
+
+}
+
+function triangulo(){
+  
+    var resultado = (base.value * altura.value)/2
+resposta.innerHTML = `Seu <b style="color: orange;">triangulo</b> tem uma área de <b style="background-Color: pink;">${resultado} cm²</b>`
+}
+
+function circulo(){
+  
+    var resultado = (3.14 * (raio.value**2))
+resposta.innerHTML  = `Sua <b style="color: purple;">circunferência</b> tem uma área de ${resultado} cm²`
+}
+
+</script>
